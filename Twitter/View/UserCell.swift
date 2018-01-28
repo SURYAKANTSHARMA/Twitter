@@ -14,9 +14,9 @@ class UserCell: DatasourceCell {
         didSet {
             guard let user = datasourceItem as? User else { return }
             nameLabel.text = user.name
-            userNameLabel.text = user.userName
-            profileImageView.image = user.profileImage
-            bioTextView.text = user.bioText
+            userNameLabel.text = user.username
+            profileImageView.loadImage(urlString: user.profileImageUrl.description)
+            bioTextView.text = user.bio
         }
     }
     let nameLabel: UILabel = {
@@ -32,8 +32,8 @@ class UserCell: DatasourceCell {
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
+    let profileImageView: CachedImageView = {
+        let imageView = CachedImageView()
         imageView.layer.cornerRadius = 5
         imageView.layer.masksToBounds = true
         imageView.backgroundColor = .red

@@ -10,12 +10,15 @@ import UIKit
 import LBTAComponents
  
 class HomeDataSource: Datasource {
-    let users: [User] = {
-       let surya = User(name: "Surya", userName: "@bksurya", bioText: "Senior IOS Developer. He is also a rajYogi and Rajrishi. He is practisioning meditation since 6 years.", profileImage: #imageLiteral(resourceName: "ProfileImage"))
-       let brain = User(name: "Brain", userName: "@letBuildthatApp", bioText: "IOS Teacher for ios swift and objective c", profileImage: #imageLiteral(resourceName: "ProfileImage"))
-        return  [surya, brain]
-    }()
-    let tweets = ["Tweet1","Tweet2"]
+    
+    let users: [User]
+    let tweets: [Tweet]
+    
+    required init(users: [User], tweets: [Tweet]) {
+        self.users = users
+        self.tweets = tweets
+    }
+    
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
     }
@@ -26,6 +29,9 @@ class HomeDataSource: Datasource {
         return [UserCell.self, TweetCell.self]
     }
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.row]
+        }
         return users[indexPath.row]
     }
     override func numberOfItems(_ section: Int) -> Int {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BA669B4014D041F17DDFA0C9 /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A506751F6F63488EBEB6D58D /* Pods_Twitter.framework */; };
+		E00C19FC201C931E00141FC6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00C19FB201C931E00141FC6 /* Service.swift */; };
+		E01BEA50201AFE0400121EB3 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01BEA4F201AFE0400121EB3 /* Tweet.swift */; };
 		E04D063E2014704700638A77 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D063D2014704700638A77 /* UserCell.swift */; };
 		E04D064020148AC000638A77 /* HomeDataSourceController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D063F20148AC000638A77 /* HomeDataSourceController+NavBar.swift */; };
 		E04D06422014E5A500638A77 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04D06412014E5A500638A77 /* TweetCell.swift */; };
@@ -25,6 +27,8 @@
 		0DFF8E22C3922950CE9E9468 /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		309807653FB8F64662CE9665 /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 		A506751F6F63488EBEB6D58D /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E00C19FB201C931E00141FC6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		E01BEA4F201AFE0400121EB3 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		E04D063D2014704700638A77 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		E04D063F20148AC000638A77 /* HomeDataSourceController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDataSourceController+NavBar.swift"; sourceTree = "<group>"; };
 		E04D06412014E5A500638A77 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E00C19FA201C930B00141FC6 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E00C19FB201C931E00141FC6 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E0ABD11E200B3A87000585D1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		E0ABD129200B3A87000585D1 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				E00C19FA201C930B00141FC6 /* Service */,
 				E0CADA2E20135B5E00D54616 /* View */,
 				E0CADA2D20135B5500D54616 /* Controller */,
 				E0CADA2C20135B4E00D54616 /* Model */,
@@ -106,6 +119,7 @@
 			children = (
 				E0CADA3120135BD900D54616 /* HomeDataSource.swift */,
 				E0CADA3320139DE700D54616 /* User.swift */,
+				E01BEA4F201AFE0400121EB3 /* Tweet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,12 +273,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0CADA3220135BD900D54616 /* HomeDataSource.swift in Sources */,
+				E01BEA50201AFE0400121EB3 /* Tweet.swift in Sources */,
 				E0ABD13F200B5BD3000585D1 /* HomeDataSourceController.swift in Sources */,
 				E0CADA3420139DE700D54616 /* User.swift in Sources */,
 				E04D06422014E5A500638A77 /* TweetCell.swift in Sources */,
 				E0CADA3020135B7200D54616 /* UserHeaderFooter.swift in Sources */,
 				E0ABD12B200B3A87000585D1 /* AppDelegate.swift in Sources */,
 				E04D064020148AC000638A77 /* HomeDataSourceController+NavBar.swift in Sources */,
+				E00C19FC201C931E00141FC6 /* Service.swift in Sources */,
 				E0ABD13D200B4346000585D1 /* HomeController.swift in Sources */,
 				E04D063E2014704700638A77 /* UserCell.swift in Sources */,
 			);

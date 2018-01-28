@@ -6,11 +6,14 @@
 //  Copyright © 2018 SuryaKant Sharma. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct User {
+struct User: Codable {
     let name: String
-    let userName: String
-    let bioText: String
-    let profileImage: UIImage
+    let username: String
+    let bio: String
+    let profileImageUrl: URL
 }
+
+
+
